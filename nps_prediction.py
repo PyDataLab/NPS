@@ -134,9 +134,6 @@ next_month['seasonality'] = next_month_seasonality
 # Приведение датафрейма следующего месяца к формату обучающей выборки
 next_month = next_month[X_train.columns]
 
-# Обучение модели на обучающей выборке
-best_rf.fit(X_train, y_train)
-
 # Предсказание NPS на следующий месяц
 prediction = best_rf.predict(next_month)
 
